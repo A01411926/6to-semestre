@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+    <h1>Contacto</h1>
+    <form id="contactForm">
+        <div>
+            <label for="subject">Asunto:</label>
+            <input type="text" id="subject" name="subject" required>
+        </div>
+        <div>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="comments">Comentarios:</label>
+            <textarea id="comments" name="comments" required></textarea>
+        </div>
+        <div>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="phone">Número de teléfono:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            
+            alert(`Gracias por sus comentarios ${name}, te contactaremos a ${email} en caso de ser necesario.`);
+            this.reset(); 
+        });
+    </script>
+</body>
+</html>
