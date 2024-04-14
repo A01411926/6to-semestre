@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="flex m-0 place-items-center min-w-[320px] min-h-[100vh]">
         <a href="https://github.com/A01411926/6to-semestre.git" target="_blank">
           <img src={github} className="logo github" alt="github logo" />
         </a>
